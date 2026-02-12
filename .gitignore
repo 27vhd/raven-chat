@@ -32,3 +32,8 @@ go.work
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
