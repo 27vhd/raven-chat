@@ -15,6 +15,10 @@ type SQLiteRepository struct {
 	db *sql.DB
 }
 
+func NewSQLiteRepository(db *sql.DB) *SQLiteRepository {
+	return &SQLiteRepository{db}
+}
+
 func (s *SQLiteRepository) Init() error {
 	query := `
 	CREATE TABLE IF NOT EXISTS messages (
@@ -57,8 +61,4 @@ func (s *SQLiteRepository) GetAllMessages() ([]models.Message, error) {
 	}
 
 	return messages, nil
-}
-
-func NewSQLiteRepository(db *sql.DB) *SQLiteRepository {
-	return &SQLiteRepository{db}
 }
