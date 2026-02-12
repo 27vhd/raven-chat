@@ -22,4 +22,4 @@ go run main.go
 
 ## License
 
-MIT
+MIT - see [LICENSE](./LICENSE) for details.
